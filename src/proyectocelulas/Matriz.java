@@ -25,6 +25,10 @@ public class Matriz {
         this.matrizVida = matrizVida;
     }
     
+    public int calculoDeCelulasVivas(int porcentaje){
+        int dimension=matrizVida.length*matrizVida.length;
+        return (dimension * porcentaje)/100;
+    }
 
     
     
