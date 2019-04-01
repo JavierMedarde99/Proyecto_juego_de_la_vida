@@ -24,6 +24,7 @@ public class Matriz {
     public void setMatrizVida(boolean[][] matrizVida) {
         this.matrizVida = matrizVida;
     }
+    
 
     
     
