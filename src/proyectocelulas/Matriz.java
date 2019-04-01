@@ -5,6 +5,8 @@
  */
 package proyectocelulas;
 
+import java.util.Scanner;
+
 /**
  *
  * @author javi
@@ -30,7 +32,17 @@ public class Matriz {
         return (dimension * porcentaje)/100;
     }
 
-    
+    public void darVida(){
+        Scanner teclado = new Scanner(System.in);
+        
+       System.out.println("Donde quiere colocar la celula vivas");
+                  System.out.println("Inserte el eje x");
+                  int x= teclado.nextInt();
+                  System.out.println("Inserte el eje y");
+                  int y= teclado.nextInt();
+                  matrizVida[x][y]=true;
+                  
+    }
     
     
     
