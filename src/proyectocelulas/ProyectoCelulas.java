@@ -44,7 +44,12 @@ public class ProyectoCelulas {
                 } while (celulasVivas > cont);
                 break;
             case 2:
-                
+                cont = 0;
+                do {
+                    m1.darVidaAleatoriamente();
+                    cont++;
+                } while (celulasVivas > cont);
+                break;
         }
     }
 

@@ -5,6 +5,7 @@
  */
 package proyectocelulas;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -40,8 +41,14 @@ public class Matriz {
                   int x= teclado.nextInt();
                   System.out.println("Inserte el eje y");
                   int y= teclado.nextInt();
-                  matrizVida[x][y]=true;
-                  
+                  matrizVida[x][y]=true;    
+    }
+    
+    public void darVidaAleatoriamente(){
+        Random rnd = new Random();
+        int x= rnd.nextInt(matrizVida.length);
+        int y= rnd.nextInt(matrizVida.length);
+        matrizVida[x][y]=true;
     }
     
     
