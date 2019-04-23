@@ -44,13 +44,30 @@ public class Matriz {
                   matrizVida[x][y]=true;    
     }
     
-    public void darVidaAleatoriamente(){
+    public void darVidaAleatoriamente(int porcentaje){
+        for(int i =0;i<=porcentaje;i++){
         Random rnd = new Random();
         int x= rnd.nextInt(matrizVida.length);
         int y= rnd.nextInt(matrizVida.length);
         matrizVida[x][y]=true;
+        }
     }
     
-    
-    
+    public void darforma(){
+        int x=2;
+        
+        for(int i=0;i<matrizVida.length;i++){
+            for(int j=0;j<matrizVida[i].length;j++){
+                 if (matrizVida[i][j]) {
+                    System.out.print("|O|");
+                } else {
+                    System.out.print("|X|");
+                }
+                 
+            }System.out.println("");
+            
+                System.out.print(x++);
+            
+        }
+    }    
 }
