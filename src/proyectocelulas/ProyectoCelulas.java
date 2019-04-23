@@ -47,12 +47,16 @@ public class ProyectoCelulas {
                     m1.darVida();
                     cont++;
                 } while (celulasVivas > cont);
+                m1.darforma();
+                        
                 break;
             case 2:
                     m1.darVidaAleatoriamente(celulasVivas);
                 m1.darforma();
                 break;
         }
+        
+        
     }
 
 }

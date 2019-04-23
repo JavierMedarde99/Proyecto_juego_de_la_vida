@@ -54,7 +54,7 @@ public class Matriz {
     }
     
     public void darforma(){
-        int x=2;
+       
         
         for(int i=0;i<matrizVida.length;i++){
             for(int j=0;j<matrizVida[i].length;j++){
@@ -66,7 +66,7 @@ public class Matriz {
                  
             }System.out.println("");
             
-                System.out.print(x++);
+                
             
         }
     }    
