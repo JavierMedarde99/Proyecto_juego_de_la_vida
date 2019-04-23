@@ -20,16 +20,21 @@ public class ProyectoCelulas {
         Scanner teclado = new Scanner(System.in);
         int dimension, porcentaje, eleccion, celulasVivas;
 
+        //crear dimension del tablero
         System.out.println("Inserte las dimensiones del tablero de Vida");
         do {
             dimension = teclado.nextInt();
         } while (dimension > 25 || dimension < 0);
+        
         Matriz m1 = new Matriz(dimension);
+        
+        //claculo de las celulas que hay que poner en el tablero
         System.out.println("Inserte el porcentaje de celulas vida en el Tablero");
         do {
             porcentaje = teclado.nextInt();
         } while (porcentaje > 100 || porcentaje < 0);
         celulasVivas = m1.calculoDeCelulasVivas(porcentaje);
+        
         System.out.println("Inserte 1 si desea hacerlo manualmente");
         System.out.println("Inserte 2 si desea que lo haga aleatoriamente");
         do {
@@ -44,11 +49,8 @@ public class ProyectoCelulas {
                 } while (celulasVivas > cont);
                 break;
             case 2:
-                cont = 0;
-                do {
-                    m1.darVidaAleatoriamente();
-                    cont++;
-                } while (celulasVivas > cont);
+                    m1.darVidaAleatoriamente(celulasVivas);
+                m1.darforma();
                 break;
         }
     }
