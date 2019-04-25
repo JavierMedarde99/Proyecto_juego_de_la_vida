@@ -53,6 +53,9 @@ public class ProyectoCelulas {
             case 2:
                     m1.darVidaAleatoriamente(celulasVivas);
                 m1.darforma();
+                m1.dios();
+                System.out.println("---------------------5");
+                m1.darforma();
                 break;
         }
         
