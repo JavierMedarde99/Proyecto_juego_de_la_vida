@@ -54,8 +54,6 @@ public class Matriz {
     }
     
     public void darforma(){
-       
-        
         for(int i=0;i<matrizVida.length;i++){
             for(int j=0;j<matrizVida[i].length;j++){
                  if (matrizVida[i][j]) {
@@ -65,48 +63,13 @@ public class Matriz {
                 }
                  
             }System.out.println("");
-            
-                
-            
         }
     }
-public   int contador(boolean a[][],int i,int j){
-            int cont1=i-1;
-            int cont2=j-1;
-            int cont=0;
-            for(int z=0;z<=8;z++){
-            if(j==-1||i==-1 ||j>=a.length||i>=a.length){
-                
-            }else{ 
-                for(int f=0;f<=3;f++){
-           for(int o=0;o<=3;o++){
-               if(a[i][j]){
-                   cont++;
-               }
-               cont2++;
-           }
-           cont1 ++;
-            }
-            
-        }
-            }
-            return cont;
-        }
-        
-public  int[][] alRededor(boolean[][]a){
-        int[][]generacion = new int[a.length][a.length];
-        for(int i=0;i<a.length;i++){
-            for(int j=0;j<a[i].length;j++){
-               generacion[i][j]=contador(a, i, j);
-            }
-        
-    } 
-return generacion;
-}
 
-public boolean[][] dios(){
-    int[][] rededor=alRededor(matrizVida);
-    for(int i=0;i<matrizVida.length;i++){
+    public int[][] verAlrededor(){
+        
+        int matrizAlrededor[][] = null;
+         for(int i=0;i<matrizVida.length;i++){
             for(int j=0;j<matrizVida[i].length;j++){
                 if(rededor[i][j]==3 && !matrizVida[i][j]){
                     matrizVida[i][j]=true;

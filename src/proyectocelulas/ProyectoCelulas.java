@@ -35,6 +35,7 @@ public class ProyectoCelulas {
         } while (porcentaje > 100 || porcentaje < 0);
         celulasVivas = m1.calculoDeCelulasVivas(porcentaje);
         
+        //Elegir entre si es manual o aleatoriamente
         System.out.println("Inserte 1 si desea hacerlo manualmente");
         System.out.println("Inserte 2 si desea que lo haga aleatoriamente");
         do {
